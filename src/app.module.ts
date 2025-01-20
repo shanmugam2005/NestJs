@@ -10,7 +10,7 @@ import { JwtModule } from '@nestjs/jwt';
 
 @Module({
 
-  imports: [StudentsModule, AuthModule,JwtModule.register({global:true,secret:'123'}) ,MongooseModule.forRoot('mongodb+srv://shanmugan2112a25:nahs%4012%24%24@cluster0.n6hpcye.mongodb.net/SignIn?retryWrites=true&w=majority&appName=Cluster0')],
+  imports: [StudentsModule, AuthModule,JwtModule.register({global:true,secret:process.env.SECRET}) ,MongooseModule.forRoot(process.env.MONGOURL)],
   controllers: [AppController],
   providers: [AppService],
 })
