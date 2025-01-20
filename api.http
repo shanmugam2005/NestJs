@@ -1,0 +1,5 @@
+POST http://localhost:3000/students/create
+{
+    "name":"shan",
+    "age":19
+}
